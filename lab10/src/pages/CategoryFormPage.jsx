@@ -27,20 +27,17 @@ function CategoryFormPage() {
     if (!nombre) return;
 
     if (id) {
-      // Actualizar categoría
       const oldCategory = categories.find(c => c.cod === Number(id));
       const updatedCategories = categories.map(c =>
         c.cod === Number(id) ? { ...c, nom: nombre } : c
       );
       setCategories(updatedCategories);
 
-      // Actualizar todas las series que usaban la categoría anterior
       const updatedSeries = series.map(s =>
         s.cat === oldCategory.nom ? { ...s, cat: nombre } : s
       );
       setSeries(updatedSeries);
     } else {
-      // Crear nueva categoría
       const maxCod = categories.reduce((max, c) => (c.cod > max ? c.cod : max), 0);
       const nuevaCategoria = { cod: maxCod + 1, nom: nombre };
       setCategories([...categories, nuevaCategoria]);
