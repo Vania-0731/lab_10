@@ -50,8 +50,3 @@ Desde el directorio `lab10`, puedes ejecutar:
 
 * Node.js (versión 14 o superior recomendada)
 * npm (generalmente viene con Node.js)
-
----
-
-¡Y eso es todo! Si tienes dudas o errores al ejecutar, asegúrate de estar dentro del directorio `lab10/` y tener Node.js instalado correctamente.
-
